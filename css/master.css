@@ -391,7 +391,7 @@ the website, in dark theme
 /*=============== HOME ===============*/
 .home{
   background-attachment: fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal11.webp) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal11.webp);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
