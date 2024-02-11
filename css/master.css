@@ -351,6 +351,7 @@ the website, in dark theme
 
 /*=============== BUTTONS ===============*/
 .button{
+  text-align: center;
   display: inline-block;
   background-color: var(--first-color);
   color: #FFF;
@@ -391,7 +392,7 @@ the website, in dark theme
 /*=============== HOME ===============*/
 .home{
   background-attachment: fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal11.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal11.webp) no-repeat;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1397,4 +1398,3 @@ the website, in dark theme
     grid-template-columns: repeat(1, 1fr);
   }
 }
-   
