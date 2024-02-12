@@ -664,7 +664,7 @@ the website, in dark theme
 
 .calculate{
   padding-bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal29.webp) no-repeat;
+  background: linear-gradient(rgb(0 0 0 / 80%), rgb(0 0 0 / 84%)), url(../images/personal29.jpg) ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
