@@ -1005,7 +1005,7 @@ textarea::placeholder {
 }
 
 .nav__item > a:hover {
-  color: #ffd700;
+  color: var(--first-color);
 }
 
 .nav__toggler {
