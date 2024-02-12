@@ -225,7 +225,12 @@ the website, in dark theme
 .grid{
   display: grid;
 }
-
+.color-green{
+  color: var(--first-color);
+}
+.color-red{
+  color: hsl(0,80%,64%) ;
+}
 .main{
   overflow: hidden; /*For animation*/
 }
@@ -655,21 +660,70 @@ the website, in dark theme
 .steps__card:hover .steps__card-number{
   transform: translateY(-.25rem);
 }
+/*=============== Calculate ===============*/
 
+.calculate{
+  padding-bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/personal29.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.calculate__container{
+  row-gap: 4rem;
+}
+.calculate__content .section__titles{
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.calculate__description{
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
 
+.calculate__from{
+  display: grid;
+  row-gap: 1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.calculate__box{
+  border-radius: 25px;
+  position: relative;
+  border: 2px solid var(--first-color-light);
+}
+.calculate__input{
+  width: 100%;
+  background: transparent;
+  padding: 20px 56px 20px 24px;
+  outline: none;
+  border: none;
+  color: var(--text-color);
+}
+.calculate__input::-webkit-outer-spin-button,
+.calculate__input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculate__input[type=number]{
+  -moz-appearance: textfield;
+}
+.calculate__label{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.25rem;
+  color: var(--title-color);
+}
+.calculate__from .button{
+  margin-top: 1.5rem;
+}
+.calculate__img{
+  width: 200px;
+  justify-self: center;
+}
+.calculate__message{
+  position: absolute;
+  transform: translateY(1rem);
+}
 
 
   
@@ -1289,6 +1343,23 @@ the website, in dark theme
       .experience__overlay:nth-child(2) {
         width: 160px;
       }
+      .calculate__container{
+        grid-template-columns: 1fr .8fr;
+        align-items: center;
+      }
+      .calculate__description{
+        text-align: initial;
+      }
+      .calculate__content .section__titles{
+        justify-content: initial;
+      }
+      .calculate__from{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+      }
+      .calculate__from .button{
+        grid-column: 1 / 3;
+      }
   }
   
   /* For large devices */
@@ -1376,7 +1447,15 @@ the website, in dark theme
     .container {
       max-width: 1024px;
     }
-
+.calculate__description{
+  width: 415px;
+}
+.calculate__from{
+  width: 505px;
+}
+.calculate__img{
+  width: 300px;
+}
     
   }
   /* For tall screens on mobiles y desktop*/
