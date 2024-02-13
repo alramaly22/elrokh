@@ -139,4 +139,4 @@ let swiperFavorite = new Swiper('.favorite__swiper', {
         delay: 6000,
         disableOnInteraction: false,
       },
-  });
+  }); 
