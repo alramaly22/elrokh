@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--=============== FAVICON ===============-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <link
         href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
         rel="stylesheet"/>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!--=============== REMIX ICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -44,6 +45,7 @@
         </style>
     </head>
     <body>
+        
             <!--==================== HEADER ====================-->
             <header class="header" id="header">
                 <nav class="nav container">
@@ -157,16 +159,16 @@
                                 <img src="images/transformation4.jpg" alt="" class="favorite__img">
                             </article>
                             <article class="favorite__article swiper-slide">
-                                <img src="images/transformation5.jpg" alt="" class="favorite__img">
-                            </article>
-                            <article class="favorite__article swiper-slide">
-                                <img src="images/transformation6.jpg" alt="" class="favorite__img">
-                            </article>
-                            <article class="favorite__article swiper-slide">
-                                <img src="images/transformation8.jpg" alt="" class="favorite__img">
-                            </article>
-                            <article class="favorite__article swiper-slide">
                                 <img src="images/transformation9.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transgirl1.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transgirl2.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation5.jpg" alt="" class="favorite__img">
                             </article>
                             <article class="favorite__article swiper-slide">
                                 <img src="images/transformation10.jpg" alt="" class="favorite__img">
@@ -603,23 +605,35 @@
                     </div>
                 </div>
             </footer>
+            <!-- <div class="loading">Loading&#8230;</div> -->
+
             <!--=============== SCROLL UP ===============-->
             <a href="#" class="scrollup" id="scroll-up"> 
                     <i class="ri-arrow-up-fill scrollup__icon"></i>
             </a>
 
                   <!--=============== JS ===============-->
-
+                  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                  <script>
+                      AOS.init({
+                        offset:200,
+                        duration: 1500
+                      });
+                    </script>
+                    <!-- <script>  window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loading");
+                        if (loader) {
+                          loader.classList.add("loader-hidden");
+                          loader.addEventListener("transitionend", () => {
+                            document.body.removeChild(loader);
+                          });
+                        }
+                      });
+                    </script> -->
         <script src="js/swiper-bundle.min.js"></script>
         <script src="js/language.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-              offset:200,
-              duration: 1500
-            });
-          </script>
+        
 </body>
 </html>
