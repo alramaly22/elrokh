@@ -15,6 +15,29 @@
         <!--=============== REMIX ICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
+        <style>
+            #language-selector {
+                appearance: none;
+                font-weight: bolder;
+                -webkit-appearance: none;
+
+                -moz-appearance: none;
+                /* background-color: #3498db; */
+                background: url(./SVJ/world-svgrepo-com\ \(6\).svg) no-repeat;
+            background-size: cover;
+            background-position: center;
+                color: var(--title-color);
+                border: none;
+                padding:10px;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+            }
+        
+            #language-selector option {
+                color: #000;
+            }
+        </style>
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="css/master.css">
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -25,25 +48,25 @@
      <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
-                 <span class="navspan">El</span> rokh
+                <span class="navspan">El</span> rokh
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html#home" class="nav__link active-link">Home</a>
+                        <a data-lang="navhome" href="index.html#home" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html#about" class="nav__link">About</a>
+                        <a data-lang="navabout" href="index.html#about" class="nav__link">About</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html#steps" class="nav__link">Steps</a>
+                        <a data-lang="navsteps" href="index.html#steps" class="nav__link">Steps</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html#pricing" class="nav__link">Pricing</a>
+                        <a data-lang="navpricing" href="index.html#pricing" class="nav__link">Pricing</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html#faqs" class="nav__link">FAQs</a>
+                        <a data-lang="navfaqs" href="index.html#faqs" class="nav__link">FAQs</a>
                     </li>
                 </ul>
 
@@ -54,6 +77,11 @@
 
             <div class="nav__btns">
                 <!-- Theme change button -->
+                <select  name="" id="language-selector">
+                    <i class="fa-solid fa-earth-oceania"></i>
+                    <option value="en" selected>En</option>
+                    <option value="ar">Ar</option>
+                </select>
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -65,13 +93,12 @@
 
     <main class="main">
         <!--==================== HOME ====================-->
-        <section class="home" id="home">
-            <div class="home__container container grid">
+        <section class="home2" id="home">
+            <div class="home__container container grid"  data-aos="fade-right">
                 <div class="home__data">
-                    <span class="home__data-subtitle">Get Ready for Transformation</span>
-                    <h1 class="home__data-title">Start Your Fitness <br> <b>Journey Now</b></h1>
-                    <a href="second.html" class="button">Get Start</a>
-
+                    <span data-lang="homespan" class="home__data-subtitle">Get Ready for Transformation</span>
+                    <h1 class="home__data-title"><span data-lang="homespan2" >Start Your Fitness</span> <br> <b><span data-lang="homeh3" >Journey Now</span></b></h1>
+                    <a data-lang="homea" href="second.html" class="button">Get Start</a>
                 </div>
 
                 <div class="home__social">
@@ -89,14 +116,57 @@
         </section>
 
   <!--==================== transformation ====================-->
-  <section class="transformatione section" id="transformation">
+  <section class="transformatione section" id="transformation"  data-aos="fade-right">
     <div class="card"  >
         <div class="face front">
             <img src="images/tran1.jpg" alt="">
         </div>
          
     </div>
-
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation1.jpg" alt="">
+        </div>
+         
+    </div>
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation3.jpg" alt="">
+        </div>
+         
+    </div>
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation4.jpg" alt="">
+        </div>
+         
+    </div>
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation5.jpg" alt="">
+        </div>
+         
+    </div>
+    <div class="card"  >
+        <div class="face front">
+            <img  src="images/transformation6.jpg" alt="">
+        </div>
+         
+    </div>
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation8.jpg" alt="">
+        </div>
+         
+    </div>
+    v
+    <div class="card"  >
+        <div class="face front">
+            <img src="images/transformation9.jpg" alt="">
+        </div>
+         
+    </div>
+    
 
 
     <div class="card"  >
@@ -267,15 +337,15 @@
 
     </main>
            <!--==================== FOOTER ====================-->
-           <footer class="footer section">
+           <footer class="footer section"  data-aos="fade-right">
             <div class="footer__container container grid">
                 <div class="footer__content grid">
                     <div class="footer__data">
                         <h3 class="footer__title"><a href="index.html" class="nav__logo">
                             <span class="navspan">El</span> rokh
-                       </a>
+                    </a>
                     </h3>
-                        <p class="footer__description">Captain Mohamed El Rokh: Certified fitness coach. Renowned for personalized  training. Owner of "Muscles State EG" gyms. Expert in nutrition and exercise. 
+                        <p data-lang="footerp" class="footer__description">Captain Mohamed El Rokh: Certified fitness coach. Renowned for personalized  training. Owner of "Muscles State EG" gyms. Expert in nutrition and exercise. 
                         Dedicated to clients' goals.
                         </p>
                         <div>
@@ -295,46 +365,43 @@
                     </div>
     
                     <div class="footer__data">
-                        <h3 class="footer__subtitle">About</h3>
+                        <h3 data-lang="footerh31" class="footer__subtitle">About</h3>
                         <ul>
                             <li class="footer__item">
-                                <a href="#about" class="footer__link">About Us</a>
+                                <a data-lang="footera1" href="index.html#about" class="footer__link">About Us</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#faqs" class="footer__link">FAQs</a>
+                                <a data-lang="footera2" href="index.html#faqs" class="footer__link">FAQs</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#experience" class="footer__link">Experience</a>
+                                <a data-lang="footera3" href="index.html#experience" class="footer__link">Experience</a>
                             </li>
                         </ul>
                     </div>
     
                     <div class="footer__data">
-                        <h3 class="footer__subtitle">Links</h3>
+                        <h3 data-lang="footerh32" class="footer__subtitle">Links</h3>
                         <ul>
                             <li class="footer__item">
-                                <a href="#transformation" class="footer__link">Transformation</a>
+                                <a data-lang="footera4" href="index.html#transformation" class="footer__link">Transformation</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#steps" class="footer__link">Steps</a>
+                                <a data-lang="footera5" href="index.html#steps" class="footer__link">Steps</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#pricing" class="footer__link">Pricing</a>
+                                <a data-lang="footera6" href="index.html#pricing" class="footer__link">Pricing</a>
                             </li>
                         </ul>
                     </div>
     
                     <div class="footer__data">
-                        <h3 class="footer__subtitle">Support</h3>
+                        <h3 data-lang="footerh33" class="footer__subtitle">Gift</h3>
                         <ul>
                             <li class="footer__item">
-                                <a href="" class="footer__link">FAQs</a>
+                                <a data-lang="footera7" href="index.html#home" class="footer__link">Home</a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__link">Support Center</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Contact Us</a>
+                                <a data-lang="footera8" href="index.html#calculate" class="footer__link">Calculate</a>
                             </li>
                         </ul>
                     </div>
@@ -352,7 +419,8 @@
                 </a>
 
                   <!--=============== JS ===============-->
-                <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/language.js"></script>    
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script>
 </body>
