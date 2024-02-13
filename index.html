@@ -11,7 +11,7 @@
         rel="stylesheet"/>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-           
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!--=============== REMIX ICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -19,84 +19,112 @@
         <link rel="stylesheet" href="css/master.css">
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
         <title>ELROKH</title>
+        <style>
+            #language-selector {
+                appearance: none;
+                font-weight: bolder;
+                -webkit-appearance: none;
+
+                -moz-appearance: none;
+                /* background-color: #3498db; */
+                background: url(./SVJ/world-svgrepo-com\ \(6\).svg) no-repeat;
+            background-size: cover;
+            background-position: center;
+                color: var(--title-color);
+                border: none;
+                padding:10px;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+            }
+        
+            #language-selector option {
+                color: #000;
+            }
+        </style>
     </head>
     <body>
-     <!--==================== HEADER ====================-->
-     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                 <span class="navspan">El</span> rokh
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#steps" class="nav__link">Steps</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#pricing" class="nav__link">Pricing</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#faqs" class="nav__link">FAQs</a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-function-line"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home" id="home">
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <!-- <span class="home__data-subtitle">Prepare for Challenge and Change</span> -->
-                    <span class="home__data-subtitle">Get Ready for Transformation</span>
-                    <h1 class="home__data-title">Start Your Fitness <br> <b>Journey Now</b></h1>
-                                        <a href="second.html" class="button">Get Start</a>
-
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.facebook.com/profile.php?id=100010410046895&ref=xav_ig_profile_web" target="_blank" class="home__social-link">
-                        <i class="ri-facebook-box-fill"></i>
+            <!--==================== HEADER ====================-->
+            <header class="header" id="header">
+                <nav class="nav container">
+                    <a href="index.html" class="nav__logo">
+                        <span class="navspan">El</span> rokh
                     </a>
-                    <a href="https://www.tiktok.com/@mohamedelrookh?_t=8f7RKVsLQDW&_r=1" target="_blank" class="home__social-link">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <!-- <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a> -->
+
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a data-lang="navhome" href="#home" class="nav__link active-link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a data-lang="navabout" href="#about" class="nav__link">About</a>
+                            </li>
+                            <li class="nav__item">
+                                <a data-lang="navsteps" href="#steps" class="nav__link">Steps</a>
+                            </li>
+                            <li class="nav__item">
+                                <a data-lang="navpricing" href="#pricing" class="nav__link">Pricing</a>
+                            </li>
+                            <li class="nav__item">
+                                <a data-lang="navfaqs" href="#faqs" class="nav__link">FAQs</a>
+                            </li>
+                        </ul>
+
+                        <div class="nav__close" id="nav-close">
+                            <i class="ri-close-line"></i>
+                        </div>
+                    </div>
+
+                    <div class="nav__btns">
+                        <!-- Theme change button -->
+                        <select  name="" id="language-selector">
+                            <i class="fa-solid fa-earth-oceania"></i>
+                            <option value="en" selected>En</option>
+                            <option value="ar">Ar</option>
+                        </select>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="ri-function-line"></i>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="video-container">
+                    <video class="home__video" autoplay muted loop>
+                        <source src="videos/vid10.mp4" type="video/mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay"></div>
                 </div>
-            </div>
-        </section>
+                <div class="home__container container grid"  data-aos="fade-right">
+                    <div class="home__data">
+                        <span data-lang="homespan" class="home__data-subtitle">Get Ready for Transformation</span>
+                        <h1 class="home__data-title"><span data-lang="homespan2" >Start Your Fitness</span> <br> <b><span data-lang="homeh3" >Journey Now</span></b></h1>
+                        <a data-lang="homea" href="second.html" class="button">Get Start</a>
+                    </div>
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/profile.php?id=100010410046895&ref=xav_ig_profile_web" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@mohamedelrookh?_t=8f7RKVsLQDW&_r=1" target="_blank" class="home__social-link">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
              <!--==================== ABOUT ====================-->
-             <section class="about section" id="about">
+             <section class="about section" id="about" data-aos="fade-left">
                 <div class="about__container container grid">
                     <div class="about__data">
-                        <h2 class="section__title about__title">More Information <br> About <span class="navspan">El Rokh</span></h2>
-                        <p class="about__description">Captain Mohamed El Rokh is a certified fitness trainer affiliated with the Egyptian and African Bodybuilding Federations. With his expertise, he delivers effective training programs tailored to individual needs, both in-person and online. Known for his dedication, he motivates clients to achieve their fitness goals. He also owns "Muscles State EG" gyms, providing a conducive environment for effective workouts.
+                        <h2 class="section__title about__title"><span data-lang="aboutspan1">More Information</span> <br> <span data-lang="aboutspan2">About </span><span data-lang="aboutspan3" class="navspan">El Rokh</span></h2>
+                        <p data-lang="aboutdiscription" class="about__description">Captain Mohamed El Rokh is a certified fitness trainer affiliated with the Egyptian and African Bodybuilding Federations. With his expertise, he delivers effective training programs tailored to individual needs, both in-person and online. Known for his dedication, he motivates clients to achieve their fitness goals. He also owns "Muscles State EG" gyms, providing a conducive environment for effective workouts.
                         </p>
                         <!-- <a href="#" class="button">Reserve a place</a> -->
                     </div>
@@ -108,283 +136,262 @@
                     </div>
                 </div>
             </section>
-
-        
-<!--==================== POPULAR ====================-->
-<section class="favorite section" id="transformation">
-    <h2 id="transformationTitle" class="section__title" data-lang="transformation_title">
-        Transformation
-    </h2>
-      <div class="favorite__container">
-        <div class="favorite__swiper swiper">
-            <div class="swiper-wrapper">
-                <article class="favorite__article swiper-slide">
-                    <img src="images/tran1.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/tran2.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans3.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans4.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans5.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans6.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans7.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans8.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans9.jpg" alt="" class="favorite__img">
-                </article>
-                <article class="favorite__article swiper-slide">
-                    <img src="images/trans10.jpg" alt="" class="favorite__img">
-                </article>
+            <!--==================== POPULAR ====================-->
+            <section class="favorite section" id="transformation" data-aos="fade-right">
+                <h2 data-lang="transformation_title" id="transformationTitle" class="section__title" >
+                    Transformation
+                </h2>
+                <div class="favorite__container">
+                    <div class="favorite__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/tran1.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation1.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation3.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation4.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation5.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation6.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation8.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation9.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation10.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation11.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation12.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation13.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/transformation14.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/trans15.jpg" alt="" class="favorite__img">
+                            </article>
+                            <article class="favorite__article swiper-slide">
+                                <img src="images/tran2.jpg" alt="" class="favorite__img">
+                            </article>
+                        </div>
+                        
+                    </div>
                 
-            </div>
-            
-        </div>
-     
-      </div>
-      <div class="buttontranscenter">
-        <a href="transformation.html" class="button button--flex">
-            See More  
-        </a>
-      </div>
-   </section>
-      <!--==================== STEPS ====================-->
-      <section class="steps section container" id="steps">
-        <div class="steps__bg">
-            <h2 class="section__title-center steps__title">
-                Celebrate Your Fitness <br> Journey  The Starting Steps
-            </h2>
-
-            <div class="steps__container grid">
-                <div class="steps__card">
-                    <div class="steps__card-number">01</div>
-                    <h3 class="steps__card-title">Get Started</h3>
-                    <p class="steps__card-description">
-                        Encourage your clients to take the first step by clicking on the "Start Now" button.
-                    </p>
                 </div>
-
-                <div class="steps__card">
-                    <div class="steps__card-number">02</div>
-                    <h3 class="steps__card-title">Register the Form</h3>
-                    <p class="steps__card-description">
-                        In the next step, your clients will need to answer all questions in the form and then click the "Submit" button.
-                    </p>
+                <div class="buttontranscenter">
+                    <a data-lang="transformation_button" href="transformation.html" class="button button--flex">
+                        See More  
+                    </a>
                 </div>
-
-                <div class="steps__card">
-                    <div class="steps__card-number">03</div>
-                    <h3 class="steps__card-title">Connect</h3>
-                    <p class="steps__card-description">
-                        Coach El Rokh will review all your personal data and reach out to you via WhatsApp. He'll send you a customized training program that will transform your body into perfection in no time.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-      <!--==================== PRICING ====================-->
-
-    <section class="section__container price__container" id="pricing">
-        <h2 class="section__title">OUR PRICING PLAN</h2>
-   
-        <div class="price__grid">
-          <div class="price__card">
-            <div class="price__card__content">
-              <h4>Normal Plan</h4>
-              <h3>Monthly<span class="spanpricing"> $210</span></h3>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Weekly customized meal plan based on your favorite foods
-              </p>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Training regimen tailored for home or gym, with instructional videos
-              </p>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Direct WhatsApp communication and follow-up
-              </p>
-            </div>
-            <button class="button">Join Now</button>
-          </div>
-          <div class="price__card">
-            <div class="price__card__content">
-              <h4>Normal Plan</h4>
-              <h3> 3 Months /<span class="spanpricing"> $210</span></h3>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Weekly customized meal plan based on your favorite foods
-              </p>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Training regimen tailored for home or gym, with instructional videos
-              </p>
-              <p>
-                <i class="fa-solid fa-circle-check"></i>
-                Direct WhatsApp communication and follow-up
-              </p>
-            </div>
-            <a href="second.html" class="button">Join Now</a>
-          </div>
-          <div class="price__card">
-            <div class="price__card__content">
-                <h4>TOURNAMENTS Preparation</h4>
-                <h3>Monthly<span class="spanpricing"> $210</span></h3>
-                <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Preparation for upcoming tournaments
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Intensive training regimen focused on competition readiness
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Advanced nutritional planning tailored to peak performance
-                  </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Weekly customized meal plan based on your favorite foods
-                </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Training regimen tailored for home or gym, with instructional videos
-                </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Direct WhatsApp communication and follow-up
-                </p>
-              </div>
-              <a href="second.html" class="button">Join Now</a>
-          </div>
-          <div class="price__card">
-            <div class="price__card__content">
-                <h4>TOURNAMENTS Preparation</h4>
-                <h3> 3 Months /<span class="spanpricing"> $210</span></h3>
-                <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Preparation for upcoming tournaments
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Intensive training regimen focused on competition readiness
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Advanced nutritional planning tailored to peak performance
-                  </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Weekly customized meal plan based on your favorite foods
-                </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Training regimen tailored for home or gym, with instructional videos
-                </p>
-                <p>
-                  <i class="fa-solid fa-circle-check"></i>
-                  Direct WhatsApp communication and follow-up
-                </p>
-              </div>
-              <a href="second.html" class="button">Join Now</a>
-          </div>
-        </div>
-      </section>
-
-
-         <!--==================== CONTACT ====================-->
-         <!-- <section class="contact section container" id="contact">                
-            <div class="contact__container grid">
-                <div class="contact__box">
-                    <h2 style="text-align: left;" class="section__title">
-                        Reach out to us today <br> via any of the given <br> information
+            </section>
+            <!--==================== STEPS ====================-->
+            <section class="steps section container" id="steps" data-aos="fade-left">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        <span data-lang="stepsh2span1">Celebrate Your Fitness</span> <br> <span data-lang="stepsh2span2">Journey  The Starting Steps</span>
                     </h2>
 
-                    <div class="contact__data">
-                        <div class="contact__information">
-                            <h3 class="contact__subtitle">Call us for instant support</h3>
-                          <a href="https://wa.me/201202990920">
-                            <span class="contact__description">
-                                <i class="ri-phone-line contact__icon"></i>
-                                +201202990920
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 data-lang="stepsh31" class="steps__card-title">Get Started</h3>
+                            <p data-lang="stepsp1" class="steps__card-description">
+                                Encourage your clients to take the first step by clicking on the 'Start Now' button.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 data-lang="stepsh32" class="steps__card-title">Register the Form</h3>
+                            <p data-lang="stepsp2" class="steps__card-description">
+                                In the next step, your clients will need to answer all questions in the form and then click the "Submit" button.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 data-lang="stepsh33" class="steps__card-title">Connect</h3>
+                            <p  data-lang="stepsp3" class="steps__card-description">
+                                Coach El Rokh will review all your personal data and reach out to you via WhatsApp. He'll send you a customized training program that will transform your body into perfection in no time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--==================== PRICING ====================-->
+            <section class="section__container price__container" id="pricing" data-aos="fade-right">
+                <h2  data-lang="pricingh2" class="section__title">OUR PRICING PLAN</h2>
+        
+                <div class="price__grid">
+                <div class="price__card">
+                    <div class="price__card__content">
+                    <h4  data-lang="pricingh41">Normal Plan</h4>
+                    <h3>
+                        <span data-lang="pricingh311">Monthly</span> /<span class="spanpricing"><span data-lang="pricingh312"> $50</span></span>
+                    </h3>
+                    <p>
+                        <i  class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan11">Weekly customized meal plan based on your favorite foods</span>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan12">Training regimen tailored for home or gym, with instructional videos</span>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan13">
+                            Direct WhatsApp communication and follow-up
+                            </span>              
+                        </p>
+                    </div>
+                    <a data-lang="pricingbutton" href="second.html" class="button">Join Now</a>
+                </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                    <h4 data-lang="pricingh41">Normal Plan</h4>
+                    <h3>
+                        <span data-lang="pricingh321">3 Months</span> /<span class="spanpricing"><span data-lang="pricingh322"> $100</span></span>
+                        </h3>
+                        <p>
+                            <i  class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan11">Weekly customized meal plan based on your favorite foods</span>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan12">Training regimen tailored for home or gym, with instructional videos</span>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                                <span data-lang="pricingspan13">
+                                Direct WhatsApp communication and follow-up
+                                </span>              
+                            </p>
+                    </div>
+                    <a data-lang="pricingbutton" href="second.html" class="button">Join Now</a>
+                </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4 data-lang="pricingh42">TOURNAMENTS Preparation</h4>
+                        <h3>
+                            <span data-lang="pricingh311">Monthly</span> /<span class="spanpricing"><span data-lang="pricingh332"> $100</span></span>
+                        </h3>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan16"> Preparation for upcoming tournaments</span>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan15">Intensive training regimen focused on competition readiness</span>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span  data-lang="pricingspan14">Advanced nutritional planning tailored to peak performance</span>
+                        </p>
+                        <p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan11">Weekly customized meal plan based on your favorite foods</span>
+                        </p>
+                        <p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan12">Training regimen tailored for home or gym, with instructional videos</span>
+                        </p>
+                        <p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span data-lang="pricingspan13">
+                            Direct WhatsApp communication and follow-up
                             </span>
-                          </a>
-                        </div>
+                        </p>
                     </div>
+                    <a data-lang="pricingbutton" href="second.html" class="button">Join Now</a>
                 </div>
-
-                <form action="" class="contact__form">
-                    <div class="contact__inputs">
-                        <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input">
-                            <label for="" class="contact__label">Email</label>
-                        </div>
-
-                        <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input">
-                            <label for="" class="contact__label">Subject</label>
-                        </div>
-
-                        <div class="contact__content contact__area">
-                            <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
-                            <label for="" class="contact__label">Message</label>
-                        </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4 data-lang="pricingh42">TOURNAMENTS Preparation</h4>
+                        <h3>
+                            <span data-lang="pricingh321">3 Months</span> /<span class="spanpricing"><span data-lang="pricingh342"> $250</span></span>
+                            </h3>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan16"> Preparation for upcoming tournaments</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-lang="pricingspan15">Intensive training regimen focused on competition readiness</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span  data-lang="pricingspan14">Advanced nutritional planning tailored to peak performance</span>
+                            </p>
+                            <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan11">Weekly customized meal plan based on your favorite foods</span>
+                            </p>
+                            <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan12">Training regimen tailored for home or gym, with instructional videos</span>
+                            </p>
+                            <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span data-lang="pricingspan13">
+                                Direct WhatsApp communication and follow-up
+                                </span>
+                            </p>
                     </div>
-
-                    <button class="button button--flex">
-                        Send Message
-                        <i class="ri-arrow-right-up-line button__icon"></i>
-                    </button>
-                </form>
-            </div>
-        </section> -->
-         <!--==================== EXPERIENCE ====================-->
-         <section class="experience" id="experience">
-            <h2 style="color: var(--first-color);font-size: var(--h1-font-size);" class="section__title">Join a group of heroes</h2>
-
-            <div class="experience__container container grid">
-                <div class="experience__content grid">
-                    <div class="experience__data">
-                        <h2 class="experience__number">+13</h2>
-                        <span class="experience__description">Year <br> Experience</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">+1000</h2>
-                        <span class="experience__description">Clients</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">+1000</h2>
-                        <span class="experience__description">Successful <br> transformations</span>
-                    </div>
+                    <a data-lang="pricingbutton" href="second.html" class="button">Join Now</a>
                 </div>
-
-                <div class="experience__img grid">
-                    <div class="experience__overlay">
-                        <img src="images/group.jpg" alt="" class="experience__img-one">
-                    </div>
                 </div>
-                <a href="second.html" class="button button--flex">
-                    Start Now  
-                </a>
-            </div>
-        </section>
-                 <!--==================== QUESTIONS ====================-->
-                 <section class="questions section" id="faqs">
-                    <h2 class="section__title">
+            </section>
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience" id="experience" data-aos="fade-left">
+                <h2 style="color: var(--first-color);font-size: var(--h1-font-size);" class="section__title" data-lang="experienceh2">Join a group of heroes</h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">+13</h2>
+                            <span class="experience__description"><span data-lang="experiencespan11">Year </span><br><span data-lang="experiencespan12"> Experience</span></span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">+1000</h2>
+                            <span data-lang="experiencespan21" class="experience__description">Clients</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">+1000</h2>
+                            <span class="experience__description"><span data-lang="experiencespan31">Successful </span><br><span data-lang="experiencespan32"> transformations</span></span>
+                        </div>
+                    </div>
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="images/group.jpg" alt="" class="experience__img-one">
+                        </div>
+                    </div>
+                    <a data-lang="experiencebutton" href="second.html" class="button button--flex">
+                        Start Now  
+                    </a>
+                </div>
+            </section>
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs" data-aos="fade-right">
+                    <h2 data-lang="questionsh1" class="section__title">
                         Common Questions
                     </h2>
         
@@ -393,13 +400,13 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq1" class="questions__item-title">
                                         Why is training with Coach Mohamed El Rokh essential?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa1" class="questions__description">
                                         Training with Coach Mohamed El Rokh is crucial because he brings a wealth of experience and expertise in achieving fitness goals. With certifications from both the Egyptian and African Bodybuilding Federations, Coach Mohamed knows precisely how to tailor workouts to maximize results for his clients.
                                     </p>
                                 </div>
@@ -408,15 +415,14 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq2" class="questions__item-title">
                                         How can Coach Mohamed El Rokh transform your body?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa2" class="questions__description">
                                         Coach Mohamed El Rokh's extensive experience and dedication enable him to design personalized training programs that effectively target specific fitness goals. Whether you aim to lose weight, build muscle, or improve overall health, Coach Mohamed provides the guidance and support needed to achieve the ideal physique.
-        
                                     </p>
                                 </div>
                             </div>
@@ -424,13 +430,13 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq3" class="questions__item-title">
                                         Why choose Coach Mohamed El Rokh for your fitness journey?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa3" class="questions__description">
                                         Coach Mohamed El Rokh's track record of success and his dedication to his clients make him the perfect choice for anyone looking to transform their body. As the owner of "Muscles State EG" gyms and a certified fitness trainer, he ensures that each client receives personalized attention and achieves exceptional results.
                                     </p>
                                 </div>
@@ -441,13 +447,13 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq4" class="questions__item-title">
                                         Why is training with Coach Mohamed El Rokh essential?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa4" class="questions__description">
                                         Training with Coach Mohamed El Rokh is essential because he brings a wealth of experience and expertise in achieving fitness goals. With certifications from both the Egyptian and African Bodybuilding Federations, Coach Mohamed knows precisely how to tailor workouts to maximize results for his clients.
                                     </p>
                                 </div>
@@ -456,13 +462,13 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq5" class="questions__item-title">
                                         How can Coach Mohamed El Rokh transform your body?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa5" class="questions__description">
                                         Coach Mohamed El Rokh can transform your body through his extensive experience and dedication. He designs personalized training programs that effectively target specific fitness goals, whether you aim to lose weight, build muscle, or improve overall health. With his guidance and support, you can achieve the ideal physique.
         
                                     </p>
@@ -472,31 +478,32 @@
                             <div class="questions__item">
                                 <header class="questions__header">
                                     <i class="ri-add-line questions__icon"></i>
-                                    <h3 class="questions__item-title">
+                                    <h3 data-lang="questionsq6" class="questions__item-title">
                                         Why choose Coach Mohamed El Rokh for your fitness journey?
                                     </h3>
                                 </header>
         
                                 <div class="questions__content">
-                                    <p class="questions__description">
+                                    <p data-lang="questionsa6" class="questions__description">
                                         There are several reasons to choose Coach Mohamed El Rokh for your fitness journey. Firstly, he has a proven track record of success and dedication to his clients. Additionally, as the owner of "Muscles State EG" gyms and a certified fitness trainer, he ensures that each client receives personalized attention and achieves exceptional results.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-         <!--==================== Calculate ====================-->
-                <section class="section calculate">
+            </section>
+            <!--==================== Calculate ====================-->
+            <section class="section calculate" id="calculate" data-aos="fade-left">
                     <div class="calculate__container container grid">
                         <div class="calculate__content">
                             <div class="section__titles">
-                                <h1 style="color: white;" class="section__title">Calculate Your Bmi</h1>
+                                <h1 data-lang="calculateh1" style="color: white;" class="section__title">Calculate Your Bmi</h1>
                                 <!-- <h1 class="section__title-border">Your Bmi</h1> -->
                             </div>
-                            <p class="calculate__description">
+                            <p data-lang="calculatep" class="calculate__description">
                                     The body mass index (BMi) calculator calculates
-                                    body mass index from your weight and height                            </p>
+                                    body mass index from your weight and height         
+                            </p>
                             <form action="" class="calculate__from" id="calculate-form">
                                 <div class="calculate__box">
                                     <input type="number" placeholder="Height" class="calculate__input" id="calculate-cm">
@@ -506,104 +513,113 @@
                                     <input type="number" placeholder="Weight" class="calculate__input" id="calculate-kg">
                                     <label for="" class="calculate__label">Kg</label>
                                 </div>
-                                <button type="submit" class="button button__flex">
+                                <button data-lang="calculatebutton" type="submit" class="button button__flex">
                                     Calculate Now
                                 </button>
                             </form>
                             <p class="calculate__message" id="calculate-message"></p>
                         </div>
-                        <!-- <img src="images/group.jpg" alt="" class="calculate__img"> -->
+                        <img src="images/personal33.jpg" alt="" class="calculate__img">
                     </div>
-                </section>
-    </main>
-          <!--==================== FOOTER ====================-->
-          <footer class="footer section">
-            <div class="footer__container container grid">
-                <div class="footer__content grid">
-                    <div class="footer__data">
-                        <h3 class="footer__title"><a href="index.html" class="nav__logo">
-                            <span class="navspan">El</span> rokh
-                       </a>
-                    </h3>
-                        <p class="footer__description">Captain Mohamed El Rokh: Certified fitness coach. Renowned for personalized  training. Owner of "Muscles State EG" gyms. Expert in nutrition and exercise. 
-                        Dedicated to clients' goals.
-                        </p>
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=100010410046895&ref=xav_ig_profile_web" target="_blank" class="footer__social">
-                                <i class="ri-facebook-box-fill"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@mohamedelrookh?_t=8f7RKVsLQDW&_r=1" target="_blank" class="footer__social">
-                                <i class="fa-brands fa-tiktok"></i>
-                            </a>
-                            <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="footer__social">
-                                <i class="ri-instagram-fill"></i>
-                            </a>
-                            <a href="https://wa.me/201202990920" target="_blank" class="footer__social">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+            </section>
+            </main>
+            <!--==================== FOOTER ====================-->
+            <footer class="footer section" data-aos="fade-right">
+                <div class="footer__container container grid">
+                    <div class="footer__content grid">
+                        <div class="footer__data">
+                            <h3 class="footer__title"><a href="index.html" class="nav__logo">
+                                <span class="navspan">El</span> rokh
+                        </a>
+                        </h3>
+                            <p data-lang="footerp" class="footer__description">Captain Mohamed El Rokh: Certified fitness coach. Renowned for personalized  training. Owner of "Muscles State EG" gyms. Expert in nutrition and exercise. 
+                            Dedicated to clients' goals.
+                            </p>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=100010410046895&ref=xav_ig_profile_web" target="_blank" class="footer__social">
+                                    <i class="ri-facebook-box-fill"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@mohamedelrookh?_t=8f7RKVsLQDW&_r=1" target="_blank" class="footer__social">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="footer__social">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                                <a href="https://wa.me/201202990920" target="_blank" class="footer__social">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 data-lang="footerh31" class="footer__subtitle">About</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a data-lang="footera1" href="#about" class="footer__link">About Us</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a data-lang="footera2" href="#faqs" class="footer__link">FAQs</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a data-lang="footera3" href="#experience" class="footer__link">Experience</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 data-lang="footerh32" class="footer__subtitle">Links</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a data-lang="footera4" href="#transformation" class="footer__link">Transformation</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a data-lang="footera5" href="#steps" class="footer__link">Steps</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a data-lang="footera6" href="#pricing" class="footer__link">Pricing</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 data-lang="footerh33" class="footer__subtitle">Gift</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a data-lang="footera7" href="#home" class="footer__link">Home</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a data-lang="footera8" href="#calculate" class="footer__link">Calculate</a>
+                                </li>
+                                <!-- <li class="footer__item">
+                                    <a data-lang="footera9" href="" class="footer__link">Contact Us</a>
+                                </li> -->
+                            </ul>
                         </div>
                     </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">About</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="#about" class="footer__link">About Us</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#faqs" class="footer__link">FAQs</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#experience" class="footer__link">Experience</a>
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">Links</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="#transformation" class="footer__link">Transformation</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#steps" class="footer__link">Steps</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#pricing" class="footer__link">Pricing</a>
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">Support</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">FAQs</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Support Center</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="footer__rights">
-                    <p class="footer__copy">&#169; 2024 <a href="#" class="mo">Mo Alramlay</a>. All rigths reserved.</p>
-                    
+                    <div class="footer__rights">
+                        <p class="footer__copy">&#169; 2024 <a href="#" class="mo">Mo Alramlay</a>. All rigths reserved.</p>
+                        
+                    </div>
                 </div>
-            </div>
-        </footer>
-                <!--=============== SCROLL UP ===============-->
-                <a href="#" class="scrollup" id="scroll-up"> 
+            </footer>
+            <!--=============== SCROLL UP ===============-->
+            <a href="#" class="scrollup" id="scroll-up"> 
                     <i class="ri-arrow-up-fill scrollup__icon"></i>
-                </a>
+            </a>
 
                   <!--=============== JS ===============-->
-                <script src="js/swiper-bundle.min.js"></script>
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/language.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+              offset:200,
+              duration: 1500
+            });
+          </script>
 </body>
 </html>
