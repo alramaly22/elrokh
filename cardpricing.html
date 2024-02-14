@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link
+        href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+        rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+           
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <style>
+            #language-selector {
+                appearance: none;
+                font-weight: bolder;
+                -webkit-appearance: none;
+
+                -moz-appearance: none;
+                /* background-color: #3498db; */
+                background: url(./SVJ/world-svgrepo-com\ \(6\).svg) no-repeat;
+            background-size: cover;
+            background-position: center;
+                color: var(--title-color);
+                border: none;
+                padding:10px;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+            }
+        
+            #language-selector option {
+                color: #000;
+            }
+        </style>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="css/master.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <title>ELROKH</title>
+    </head>
+    <body>
+     <!--==================== HEADER ====================-->
+     <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="navspan">El</span> rokh
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a data-lang="navhome" href="index.html#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-lang="navabout" href="index.html#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-lang="navsteps" href="index.html#steps" class="nav__link">Steps</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-lang="navpricing" href="index.html#pricing" class="nav__link">Pricing</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-lang="navfaqs" href="index.html#faqs" class="nav__link">FAQs</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <select  name="" id="language-selector">
+                    <i class="fa-solid fa-earth-oceania"></i>
+                    <option value="en" selected>En</option>
+                    <option value="ar">Ar</option>
+                </select>
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home2" id="home">
+            <div class="home__container container grid"  data-aos="fade-right">
+                <div class="home__data">
+                    <span data-lang="homespan" class="home__data-subtitle">Get Ready for Transformation</span>
+                    <h1 class="home__data-title"><span data-lang="homespan2" >Start Your Fitness</span> <br> <b><span data-lang="homeh3" >Journey Now</span></b></h1>
+                    <a data-lang="homea" href="second.html" class="button">Get Start</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<!--==================== JOIN ====================-->
+<section class="serv section">
+    <div class="serv__cintainer container grid">
+        <!-- <article class="serv__card" >
+            <img src="images/129-1297575_vodafone-cash-logo-png-transparent-png-removebg-preview.png" class="serv__icon" alt="">
+
+            <h2 class="serv__title"data-lang="vodafoncash">Vodafone Cash</h2>
+            <p class="serv__description" data-lang="vodp">
+                Copy this number, then transfer the amount to this number, then save the number you transferred from and take a screenshot</p>
+                      <button class="serv__botton button" data-lang="serb">know more</button>
+            <div class="services__model">
+                <div class="services__model-content">
+                    <i class="fa-solid fa-xmark services__model-close"></i>
+
+                    <h2 class="services__model-title">+201017641688</h2>
+
+                    <ul class="services__model-list grid">
+                        <li class="services__model-item" data-lang="vli">
+                            Copy this number, then transfer the amount to this number,take a screenshot</li>
+                        <li class="services__model-item" data-lang="vl2">
+                            then save the number you transferred from                        </li>
+                        <li class="services__model-item" data-lang="vl3">
+                            Click on “Start Now” and write the number you moved from to have the program executed immediately                        </li>
+                    </ul>
+                    <a href="second.html" style="margin-top: 1rem;" class="button" data-lang="gets">Get Start</a>
+                </div>
+            </div>
+        </article> -->
+       
+        <article class="serv__card carddiff" >
+            <img style="    width: 18%;" src="images/screen.png" class="serv__icon" alt="">
+
+            <h2 class="serv__title" data-lang="takescreen">Take a screenshot</h2>
+            <p class="serv__description" data-lang="tcp">
+                Click on “Start Now” and put the number you transferred from in the field designated for that, then fill out the form completely, then click on “Submit Form.”
+            </p>
+            <a href="second.html" style="margin-top: 1rem;" data-lang="gets" class="button">Get Start</a>
+            
+        </article>
+        <article class="serv__card" >
+            <img src="images/274051482_132891619233400_3875723245134266791_n-removebg-preview.png" class="serv__icon" alt="">
+            <h2 class="serv__title" data-lang="banktrasfer">InstaPay</h2>
+
+            <p class="serv__description" data-lang="bankp">
+                Transfer the amount to this account, then save the account number from which the transfer was made, then take a screenshot of the transfer            </p>
+            <button class="serv__botton button" data-lang="serb">know more</button>
+            <div class="services__model">
+                <div class="services__model-content">
+                    <i class="fa-solid fa-xmark services__model-close"></i>
+
+                    <h2 class="services__model-title">+201202990920</h2>
+
+                    <ul class="services__model-list grid">
+                        <li class="services__model-item" data-lang="bl1">
+                            Transfer the amount to this account and then take a screenshot of the transfer 
+                        </li>
+                        <li class="services__model-item" data-lang="bl2">
+                            Save the account number you transferred from  
+                        </li>
+                        <li class="services__model-item" data-lang="bl3">
+                            Click on “Start Now” and write the number you moved from to have the program executed immediately        
+                        </li>
+                    </ul>
+                    <a href="second.html" style="margin-top: 1rem;" class="button" data-lang="gets">Get Start</a>
+
+                </div>
+            </div>
+        </article>
+    </div>
+  </section>
+
+    </main>
+           <!--==================== FOOTER ====================-->
+           <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title"><a href="index.html" class="nav__logo">
+                            <span class="navspan">El</span> rokh
+                    </a>
+                    </h3>
+                        <p data-lang="footerp" class="footer__description">Captain Mohamed El Rokh: Certified fitness coach. Renowned for personalized  training. Owner of "Muscles State EG" gyms. Expert in nutrition and exercise. 
+                        Dedicated to clients' goals.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=100010410046895&ref=xav_ig_profile_web" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@mohamedelrookh?_t=8f7RKVsLQDW&_r=1" target="_blank" class="footer__social">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.instagram.com/m_elrookh/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://wa.me/201202990920" target="_blank" class="footer__social">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 data-lang="footerh31" class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a data-lang="footera1" href="index.html#about" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a data-lang="footera2" href="index.html#faqs" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a data-lang="footera3" href="index.html#experience" class="footer__link">Experience</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 data-lang="footerh32" class="footer__subtitle">Links</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a data-lang="footera4" href="index.html#transformation" class="footer__link">Transformation</a>
+                            </li>
+                            <li class="footer__item">
+                                <a data-lang="footera5" href="index.html#steps" class="footer__link">Steps</a>
+                            </li>
+                            <li class="footer__item">
+                                <a data-lang="footera6" href="index.html#pricing" class="footer__link">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 data-lang="footerh33" class="footer__subtitle">Gift</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a data-lang="footera7" href="index.html#home" class="footer__link">Home</a>
+                            </li>
+                            <li class="footer__item">
+                                <a data-lang="footera8" href="index.html#calculate" class="footer__link">Calculate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2024 <a href="#" class="mo">Mo Alramlay</a>. All rigths reserved.</p>
+                    
+                </div>
+            </div>
+        </footer>
+                <!--=============== SCROLL UP ===============-->
+                <a href="#" class="scrollup" id="scroll-up"> 
+                    <i class="ri-arrow-up-fill scrollup__icon"></i>
+                </a>
+
+                  <!--=============== JS ===============-->
+                  <script>
+                    // serv
+const model =document.querySelectorAll('.services__model'),
+  modelButton = document.querySelectorAll('.serv__botton'),
+  modelClose =  document.querySelectorAll('.services__model-close')
+
+  let activeModel = (modelClick) =>{
+    model[modelClick].classList.add('active-model')
+  }
+  modelButton.forEach((modelButton, i) =>{
+    modelButton.addEventListener('click', ()=>{
+      activeModel(i)
+    })
+  })
+  modelClose.forEach((modelClose) =>{
+    modelClose.addEventListener('click',() =>{
+      model.forEach((modelRemove) =>{
+        modelRemove.classList.remove('active-model')
+      })
+    })
+  })
+                  </script>
+        <script src="js/language.js"></script>    
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+              offset:200,
+              duration: 1500
+            });
+          </script>
+</body>
+</html>
