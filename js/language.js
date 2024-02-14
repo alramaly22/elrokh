@@ -85,6 +85,17 @@ let lang = {
         footerh33:"الهدية",
         footera7:"الصفحة الرئيسية",
         footera8:"احسب",
+
+        bankp: "قم بتحويل المبلغ إلى هذا الحساب، ثم احفظ رقم الحساب الذي تم التحويل منه، ثم التقاط صورة للتحويل",
+        banktrasfer: "انستا بي",
+        bl1: "قم بتحويل المبلغ إلى هذا الحساب، ثم التقاط صورة للتحويل",
+        bl2: "احفظ رقم الحساب الذي تم التحويل منه",
+        bl3: "انقر على 'ابدأ الآن' واكتب الرقم الذي قمت بالتحويل منه لتنفيذ البرنامج على الفور",
+        gets: "ابدأ الآن",
+        takescreen: "التقاط صورة للشاشة",
+        tcp: "انقر على 'ابدأ الآن' وضع الرقم الذي قمت بالتحويل منه في الحقل المخصص لذلك، ثم قم بملء الاستمارة بشكل كامل، ثم انقر على 'إرسال الاستمارة'."
+
+
     },
     en: {
         navhome:"Home",
@@ -172,6 +183,16 @@ let lang = {
         footerh33:"Gift",
         footera7:"Home",
         footera8:"Calculate",
+
+        banktrasfer:"InstaPay",
+        bankp: "Transfer the amount to this account, then save the account number from which the transfer was made, then take a screenshot of the transfer  ",
+        bl1: "Transfer the amount to this account and then take a screenshot of the transfer ",
+        bl2: " Save the account number you transferred from ",
+        bl3: "Click on “Get Start” and write the number you moved from to have the program executed immediately        ",
+        gets: "Get Start",
+        takescreen: "Take a screenshot",
+        tcp: "Click on “Start Now” and put the number you transferred from in the field designated for that, then fill out the form completely, then click on “Submit Form.” "
+
     }
 };
 
