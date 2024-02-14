@@ -45,6 +45,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    label {
+    color: #f0d8d8;
+    width: 100%;
+    right: -2rem;
+    top: -1.5rem;
+    position: absolute;
+    font-size: 1rem;
+}
+  </style>
 </head>
 
 <body>
@@ -100,7 +110,18 @@
             </div>
 
 
+            <div class="input-group">
+              <span class="icon-container">
+                <img class="kolo" src="SVJ/money-send-svgrepo-com (1).svg" alt="">
 
+                <!-- <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite3.svg#whatsapp"></use>
+                  </svg> -->
+              </span>
+              <label for="MonyTransfer">The number from which you transferred the amount</label>
+              <input class="input" name="MonyTransfer" type="text" placeholder="InstaPay" required
+                id="MonyTransfer" />
+            </div>
             <!-- <div class="input-group">
               <span class="icon-container">
                 <img class="kolo" src="SVJ/whatsapp-svgrepo-com.svg" alt="">
@@ -330,7 +351,7 @@
         function sendToWhatsApp() {
   // Get form input values
   const name = document.querySelector('input[name="Name"]').value;
-  // const whatsappNumber = document.querySelector('input[name="Whatsapp Number"]').value;
+  const MonyTransfer = document.querySelector('input[name="MonyTransfer"]').value;
   const age = document.querySelector('input[name="Age"]').value;
   const weight = document.querySelector('input[name="Weight"]').value;
   const height = document.querySelector('input[name="Height"]').value;
@@ -350,6 +371,7 @@
   // Construct the message
   const message = `
     Name: ${name}
+    MonyTransfer: ${MonyTransfer}
     Age: ${age}
     Weight: ${weight} kg
     Height: ${height} cm
